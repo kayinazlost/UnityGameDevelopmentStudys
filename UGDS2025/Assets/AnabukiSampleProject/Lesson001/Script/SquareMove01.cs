@@ -1,53 +1,53 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 
 /// <summary>
-/// SquareMove01FƒvƒŒƒCƒ„[ƒLƒƒƒ‰ƒNƒ^[‚È‚Ç‚ÌƒIƒuƒWƒFƒNƒg‚ðWASDƒL[‚ÅˆÚ“®‚³‚¹‚éƒNƒ‰ƒXB
-/// ƒgƒ‰ƒ“ƒXƒŒ[ƒgiTranslatej‚ðŽg—p‚µAInput‚ÌƒAƒNƒVƒY‚ÅŠŠ‚ç‚©‚ÈˆÚ“®‚ðŽÀŒ»B
+/// SquareMove01ï¼šãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ã‚­ãƒ£ãƒ©ã‚¯ã‚¿ãƒ¼ãªã©ã®ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’WASDã‚­ãƒ¼ã§ç§»å‹•ã•ã›ã‚‹ã‚¯ãƒ©ã‚¹ã€‚
+/// ãƒˆãƒ©ãƒ³ã‚¹ãƒ¬ãƒ¼ãƒˆï¼ˆTranslateï¼‰ã‚’ä½¿ç”¨ã—ã€Inputã®ã‚¢ã‚¯ã‚·ã‚ºã§æ»‘ã‚‰ã‹ãªç§»å‹•ã‚’å®Ÿç¾ã€‚
 /// </summary>
 public class SquareMove01 : MonoBehaviour
 {
-    // „Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ
-    // ƒpƒuƒŠƒbƒN•Ï”iƒCƒ“ƒXƒyƒNƒ^[•\Ž¦—pj ¦Header•t‚«
-    // „Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ
+    // â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+    // ãƒ‘ãƒ–ãƒªãƒƒã‚¯å¤‰æ•°ï¼ˆã‚¤ãƒ³ã‚¹ãƒšã‚¯ã‚¿ãƒ¼è¡¨ç¤ºç”¨ï¼‰ â€»Headerä»˜ã
+    // â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
-    [Header("ˆÚ“®‘¬“xiƒ†ƒjƒbƒg/•bj")]
+    [Header("ç§»å‹•é€Ÿåº¦ï¼ˆãƒ¦ãƒ‹ãƒƒãƒˆ/ç§’ï¼‰")]
     public float m_MoveSpeed = 5.0f;
 
-    // „Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ
-    // ƒvƒ‰ƒCƒx[ƒg•Ï”iƒCƒ“ƒXƒyƒNƒ^[‚É•\Ž¦j ¦SerializeField•t‚«
-    // „Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ
+    // â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+    // ãƒ—ãƒ©ã‚¤ãƒ™ãƒ¼ãƒˆå¤‰æ•°ï¼ˆã‚¤ãƒ³ã‚¹ãƒšã‚¯ã‚¿ãƒ¼ã«è¡¨ç¤ºï¼‰ â€»SerializeFieldä»˜ã
+    // â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
     [SerializeField]
-    [Header("‰¡•ûŒü‚Ì“ü—Í’l")]
+    [Header("æ¨ªæ–¹å‘ã®å…¥åŠ›å€¤")]
     private float m_Horizontal = 0f;
 
     [SerializeField]
-    [Header("c•ûŒü‚Ì“ü—Í’l")]
+    [Header("ç¸¦æ–¹å‘ã®å…¥åŠ›å€¤")]
     private float m_Vertical = 0f;
 
-    // „Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ
-    // MonoBehaviourŠÖ”
-    // „Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ
+    // â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+    // MonoBehaviouré–¢æ•°
+    // â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
     /// <summary>
-    /// –ˆƒtƒŒ[ƒ€ˆÚ“®ˆ—‚ðs‚¤
+    /// æ¯Žãƒ•ãƒ¬ãƒ¼ãƒ ç§»å‹•å‡¦ç†ã‚’è¡Œã†
     /// </summary>
     void Update()
     {
-        // “ü—ÍŽæ“¾
-        m_Horizontal = Input.GetAxis("Horizontal");  // A/D‚Ü‚½‚Í©¨
-        m_Vertical = Input.GetAxis("Vertical");      // W/S‚Ü‚½‚Íª«
+        // å…¥åŠ›å–å¾—
+        m_Horizontal = Input.GetAxis("Horizontal");  // A/Dã¾ãŸã¯â†â†’
+        m_Vertical = Input.GetAxis("Vertical");      // W/Sã¾ãŸã¯â†‘â†“
 
-        // ˆÚ“®•ûŒüƒxƒNƒgƒ‹‚ðì¬
+        // ç§»å‹•æ–¹å‘ãƒ™ã‚¯ãƒˆãƒ«ã‚’ä½œæˆ
         Vector3 moveDirection = new Vector3(m_Horizontal, 0f, m_Vertical);
 
-        // ³‹K‰»‚µ‚Ä•ûŒü‚ðˆÛŽ‚µ‚È‚ª‚ç‘¬“x‚ðˆê’è‚É‚·‚é
+        // æ­£è¦åŒ–ã—ã¦æ–¹å‘ã‚’ç¶­æŒã—ãªãŒã‚‰é€Ÿåº¦ã‚’ä¸€å®šã«ã™ã‚‹
         if (moveDirection.magnitude > 1f)
         {
             moveDirection.Normalize();
         }
 
-        // ƒgƒ‰ƒ“ƒXƒŒ[ƒg‚É‚æ‚éˆÚ“®ˆ—iƒ[ƒJƒ‹À•WŒnj
+        // ãƒˆãƒ©ãƒ³ã‚¹ãƒ¬ãƒ¼ãƒˆã«ã‚ˆã‚‹ç§»å‹•å‡¦ç†ï¼ˆãƒ­ãƒ¼ã‚«ãƒ«åº§æ¨™ç³»ï¼‰
         transform.Translate(moveDirection * m_MoveSpeed * Time.deltaTime, Space.Self);
     }
 }
